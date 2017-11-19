@@ -1,101 +1,57 @@
  <!DOCTYPE html> 
 <html> 
-<head> 
-<title>Buscajuegos</title> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script src="./js/jquery-3.2.1.min.js"></script> 
-<script src="./js/bootstrap.min.js"></script> 
-</head> 
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark"></nav>
+	<head> 
+		<title>Buscajuegos</title> 
+		<meta name="Buscajuegos" content="width=device-width, initial-scale=1.0"> 
+		<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<script src="./js/jquery-3.2.1.min.js"></script> 
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/buscajuegos.js"></script>
+	</head> 
+	<body>
+		<!-- <img id="loading" class="hidden" width="75px" style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);" src="./img/loading.gif"> -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark"></nav>
 
-<main role="main" class="container">
+		<main role="main" class="container">
+			<div class="row">
+				<div class="col-md-3"></div> 
+				<div class="col-lg-6"><img src="./img/videojuegos.jpg" class="img-responsive" alt="Buscajuegos"></div>
+				<div class="col-lg-3"></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="col-lg-6">
+					<div class="input-group">
+						<input name="inputsearch" type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">
+								<span class="glyphicon glyphicon-search"></span>
+								<span>Buscar</span>
+							</button>
+						</span>
+					</div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+				<div class="col-lg-3"></div>
+			</div><!-- /.row -->
 
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-lg-6"><img src="./img/videojuegos.jpg" class="img-responsive" alt="Buscajuegos"></div>
-  <div class="col-lg-3"></div>
-</div>
-<div class="row">
-  <div class="col-lg-3"></div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
-          <span class="glyphicon glyphicon-search"></span>
-          <span>Buscar</span>
-        </button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-3"></div>
-</div><!-- /.row -->
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-8"><dl id="seacher-results"></dl></div>
+				<div class="col-lg-1"></div>
+			</div>
 
-<div class="row">
-  <div class="col-lg-1"></div>
-    <div class="col-lg-8">
-	<dl>
-	  <dt><a>Description lists</a></dt>
-	  <dd>A description list is perfect for defining terms.</dd>
-	  <dt><a>Euismod</a></dt>
-	  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-	  <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-	  <dt><a>Malesuada porta</a></dt>
-	  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-	  <dt><a>Description lists</a></dt>
-	  <dd>A description list is perfect for defining terms.</dd>
-	  <dt><a>Euismod</a></dt>
-	  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-	  <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-	  <dt><a>Malesuada porta</a></dt>
-	  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-	  <dt><a>Description lists</a></dt>
-	  <dd>A description list is perfect for defining terms.</dd>
-	  <dt><a>Euismod</a></dt>
-	  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-	  <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-	  <dt><a>Malesuada porta</a></dt>
-	  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-	  <dt><a>Description lists</a></dt>
-	  <dd>A description list is perfect for defining terms.</dd>
-	  <dt><a>Euismod</a></dt>
-	  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-	  <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-	  <dt><a>Malesuada porta</a></dt>
-	  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-	</dl>
-</div>
-  <div class="col-lg-1"></div>
-</div>
-
-</div>
- </div>
-
-<nav aria-label="Page navigation" class="text-center">
-<ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
-</main>
-
-
-
-</body> 
+			<nav id="pagination" class="text-center hidden">
+				<input name="inputpage" type="hidden">
+				<ul class="pagination"></ul>
+			</nav>
+		</main>
+		
+		<script type="text/javascript">
+			$(function() {
+				inicializeJS(document);
+			});
+		</script>
+	</body> 
 </html>
+
